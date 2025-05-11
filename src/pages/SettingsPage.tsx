@@ -8,7 +8,7 @@ import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { Switch } from '@/components/ui/switch';
 import { Textarea } from '@/components/ui/textarea';
-import { User, Shield, Bell, Languages, Database, Wifi, RefreshCw } from 'lucide-react';
+import { User, Shield, Bell, Languages, Database, Wifi, RefreshCw, FileDown, AlertTriangle } from 'lucide-react';
 import { Badge } from '@/components/ui/badge';
 
 const SettingsPage = () => {

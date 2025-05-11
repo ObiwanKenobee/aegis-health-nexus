@@ -1,11 +1,10 @@
-
 import React from 'react';
 import DashboardLayout from '@/components/layout/DashboardLayout';
 import { Card, CardContent, CardHeader, CardTitle, CardFooter } from '@/components/ui/card';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { Button } from '@/components/ui/button';
 import { Textarea } from '@/components/ui/textarea';
-import { MessageSquare, Languages, BookOpen, Share2 } from 'lucide-react';
+import { MessageSquare, Languages, BookOpen, Share2, Users } from 'lucide-react';
 import { Badge } from '@/components/ui/badge';
 
 const CounselorToolPage = () => {
