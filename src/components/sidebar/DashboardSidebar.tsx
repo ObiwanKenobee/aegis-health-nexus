@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { 
   BarChart3, 
@@ -9,7 +10,7 @@ import {
   HeartPulse, 
   RefreshCw, 
   Network, 
-  FileExport, 
+  FileDown, 
   Info
 } from 'lucide-react';
 import { NavLink } from 'react-router-dom';
@@ -54,7 +55,7 @@ const DashboardSidebar: React.FC = () => {
     {
       name: 'Data Export',
       href: '/data-export',
-      icon: FileExport,
+      icon: FileDown,
     },
     {
       name: 'Settings',

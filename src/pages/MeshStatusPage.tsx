@@ -1,4 +1,3 @@
-
 import React from 'react';
 import GlobalHeader from '@/components/header/GlobalHeader';
 import DashboardSidebar from '@/components/sidebar/DashboardSidebar';
@@ -20,7 +19,7 @@ const MeshStatusPage = () => {
         }}
         notifications={notifications}
         onNotificationRead={markNotificationAsRead}
-        onAllNotificationsAsRead={markAllNotificationsAsRead}
+        onAllNotificationsRead={markAllNotificationsAsRead}
         onSyncNow={syncNow}
       />
       
@@ -50,3 +49,4 @@ const MeshStatusPage = () => {
 };
 
 export default MeshStatusPage;
+

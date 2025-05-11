@@ -1,4 +1,3 @@
-
 import React from 'react';
 import GlobalHeader from '@/components/header/GlobalHeader';
 import DashboardSidebar from '@/components/sidebar/DashboardSidebar';
@@ -22,7 +21,7 @@ const ColdChainPage = () => {
         }}
         notifications={notifications}
         onNotificationRead={markNotificationAsRead}
-        onAllNotificationsAsRead={markAllNotificationsAsRead}
+        onAllNotificationsRead={markAllNotificationsAsRead}
         onSyncNow={syncNow}
       />
       
