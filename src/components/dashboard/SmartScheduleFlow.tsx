@@ -1,7 +1,7 @@
 
 import React, { useState } from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { Calendar as CalendarIcon, MapPin, Users, Calendar, Filter } from 'lucide-react';
+import { Calendar as CalendarIcon, MapPin, Users, Filter } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Calendar } from '@/components/ui/calendar';
 import { Badge } from '@/components/ui/badge';
@@ -63,7 +63,7 @@ const SmartScheduleFlow: React.FC = () => {
       <CardHeader className="pb-3">
         <div className="flex items-center justify-between">
           <CardTitle className="text-xl flex items-center gap-2">
-            <Calendar className="h-5 w-5 text-health-primary" />
+            <CalendarIcon className="h-5 w-5 text-health-primary" />
             Smart Schedule
           </CardTitle>
           <div className="flex items-center space-x-4">

@@ -20,7 +20,7 @@ const SettingsPage = () => {
         }}
         notifications={notifications}
         onNotificationRead={markNotificationAsRead}
-        onAllNotificationsAsRead={markAllNotificationsAsRead}
+        onAllNotificationsRead={markAllNotificationsAsRead}
         onSyncNow={syncNow}
       />
       
