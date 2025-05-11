@@ -64,13 +64,13 @@ export class IndexedDBService {
   }
 
   async get<T>(storeName: string, key: IDBValidKey): Promise<T | undefined> {
-    return this.runTransaction(storeName, 'readonly', (store) => {
+    return this.runTransaction<T>(storeName, 'readonly', (store) => {
       return store.get(key);
     });
   }
 
   async getAll<T>(storeName: string): Promise<T[]> {
-    return this.runTransaction(storeName, 'readonly', (store) => {
+    return this.runTransaction<T[]>(storeName, 'readonly', (store) => {
       return store.getAll();
     });
   }
@@ -88,7 +88,7 @@ export class IndexedDBService {
   }
 
   async count(storeName: string): Promise<number> {
-    return this.runTransaction(storeName, 'readonly', (store) => {
+    return this.runTransaction<number>(storeName, 'readonly', (store) => {
       return store.count();
     });
   }

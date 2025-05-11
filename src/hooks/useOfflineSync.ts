@@ -4,6 +4,15 @@ import { healthDB } from '@/utils/indexedDb';
 
 export type SyncStatus = 'online' | 'offline' | 'syncing' | 'error';
 
+// Define the shape of items stored in the sync queue
+interface SyncQueueItem {
+  id: string;
+  data: any;
+  timestamp: Date;
+  type: string;
+  syncStatus: 'pending' | 'syncing' | 'completed' | 'failed';
+}
+
 interface UseOfflineSyncOptions {
   onSyncComplete?: () => void;
   onSyncError?: (error: Error) => void;
@@ -70,7 +79,7 @@ export const useOfflineSync = (options?: UseOfflineSyncOptions) => {
   // Function to add data to sync queue
   const addToSyncQueue = useCallback(async (data: any) => {
     try {
-      const syncItem = {
+      const syncItem: SyncQueueItem = {
         id: `${Date.now()}-${Math.random().toString(36).substring(2, 9)}`,
         data,
         timestamp: new Date(),
@@ -110,7 +119,7 @@ export const useOfflineSync = (options?: UseOfflineSyncOptions) => {
       console.log('Starting sync process...');
 
       // Get all pending items
-      const pendingItems = await healthDB.getAll('syncQueue');
+      const pendingItems = await healthDB.getAll<SyncQueueItem>('syncQueue');
       
       if (pendingItems.length === 0) {
         console.log('No items to sync');
